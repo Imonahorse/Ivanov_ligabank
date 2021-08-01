@@ -1,0 +1,20 @@
+.item {
+  &:hover {
+    color: var(--blue);
+  }
+}
+
+.link {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 22px;
+    top: -4px;
+    left: 10px;
+    background-image: url("../../img/enter.svg");
+  }
+}

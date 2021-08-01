@@ -1,0 +1,84 @@
+.footer {
+  background-color: var(--gray);
+}
+
+.logoFooter {
+  margin-bottom: 12px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 50px 0 20px 0;
+}
+
+.address {
+  color: var(--gray-2);
+  font-size: 12px;
+  line-height: 140%;
+  font-style: inherit;
+}
+
+.company {
+  width: 252px;
+}
+
+.telMobile {
+  position: relative;
+  width: 196px;
+  padding-left: 29px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 16px;
+    background-image: url("../../img/mobile-phone.svg");
+  }
+}
+
+.telHome {
+  position: relative;
+  width: 155px;
+  padding-left: 33px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../img/home-phone.svg");
+  }
+}
+
+.phone {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.description {
+  display: block;
+  width: 170px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #707C87;
+}
+
+.socials {
+  display: flex;
+}
+
+.icon {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,58 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  margin-bottom: 22px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+}
+
+.inputWrapper {
+  display: flex;
+}
+
+.input {
+  width: 390px;
+  height: 60px;
+  margin-right: 15px;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  line-height: 140%;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+
+.image {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -85px;
+    width: 56px;
+    height: 36px;
+    background-image: url("../../img/arrows.svg");
+  }
+}
+
+.select {
+  width: 120px;
+  height: 60px;
+  padding: 10px 10px 10px 15px;
+  appearance: none;
+  font-size: 30px;
+  line-height: 42px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  background-image: url("../../img/caret.svg");
+  background-repeat: no-repeat;
+  background-position: 86% center;
+}

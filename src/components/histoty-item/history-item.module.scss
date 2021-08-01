@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  min-width: 378px;
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 130%;
+
+  &:nth-child(n+6) {
+    justify-content: flex-end;
+  }
+}
+
+.date {
+  margin-right: 51px;
+}
+
+.amountFrom {
+  position: relative;
+  padding-right: 50px;
+  margin: 0 23px 0 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 41px;
+    height: 18px;
+    background-image: url("../../img/arrow.svg");
+  }
+}
+
+.amountTo {
+  margin: 0;
+}
+

@@ -1,0 +1,19 @@
+.errorWrapper {
+  z-index: 1000;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+
+.errorText {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+}
+
+.listFooter {
+  flex-direction: column;
+  margin-right: 0;
+}
