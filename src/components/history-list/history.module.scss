@@ -1,7 +1,7 @@
 .list {
   position: relative;
   display: grid;
-  grid-template-columns: 487px 470px;
+  grid-template-columns: 470px 470px;
   grid-template-rows: repeat(5, 45px);
   grid-auto-flow: column;
   justify-content: space-between;

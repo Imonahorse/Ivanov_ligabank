@@ -16,12 +16,16 @@
 }
 
 .button {
-  width: 198px;
-  height: 51px;
+  padding: 15px 27px;
   font-size: 17px;
   border: none;
   border-radius: 4px;
   background-color: var(--blue-2);
   color: var(--gray);
   cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    background-color: red;
+  }
 }

@@ -1,5 +1,5 @@
 import styles from './input.module.scss';
-import {Valutes} from '../../const';
+import {Currency} from '../../const';
 import React from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
@@ -14,13 +14,11 @@ function Input(
     handleChangeCurrency,
   },
 ) {
-  const imageClass = cn(isImage && styles.image);
+  const imageClass = cn(isImage && styles.image, styles.label);
   return (
     <fieldset className={styles.fieldset}>
-      <legend className={styles.legend}>{label}</legend>
-      <div className={styles.inputWrapper}>
         <label className={imageClass}>
-          <span className='visually-hidden'>Сумма</span>
+          {label}
           <input
             className={styles.input}
             type="text"
@@ -36,12 +34,11 @@ function Input(
             value={currencyValue}
             onChange={(evt) => handleChangeCurrency(evt, label)}
           >
-            {Object.keys(Valutes).map((item) => (
+            {Object.keys(Currency).map((item) => (
               <option value={item} key={item}>{item}</option>
             ))}
           </select>
         </label>
-      </div>
     </fieldset>
   );
 }

@@ -1,3 +1,8 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .item {
   &:hover {
     color: var(--blue);

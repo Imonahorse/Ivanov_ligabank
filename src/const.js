@@ -1,9 +1,9 @@
-const Valutes = {
+const Currency = {
   RUB: 'RUB',
   USD: 'USD',
   EUR: 'EUR',
-  JPY: 'JPY',
-  CAD: 'CAD',
+  GBP: 'GBP',
+  CNY: 'CNY',
 };
 
-export {Valutes};
+export {Currency};

@@ -11,10 +11,10 @@ import {
 const initialState = {
   rates: {
     RUB: 1,
-    JPY: 1,
+    GBP: 1,
     EUR: 1,
     USD: 1,
-    CAD: 1,
+    CNY: 1,
   },
   history: [],
   ratesLoadStatus: {

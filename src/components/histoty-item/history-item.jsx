@@ -12,8 +12,8 @@ function HistoryItem({item}) {
   return (
     <li className={styles.item}>
       <span className={styles.date}>{humanizedDate}</span>
-      <span className={styles.amountFrom}>{amountFrom}{currencyFrom}</span>
-      <span className={styles.amountTo}>{amountTo}{currencyTo}</span>
+      <span className={styles.amountFrom}>{amountFrom} {currencyFrom}</span>
+      <span className={styles.amountTo}>{amountTo} {currencyTo}</span>
     </li>
   );
 }

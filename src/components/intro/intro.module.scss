@@ -9,7 +9,7 @@
     right: 0;
     width: 298px;
     height: 400px;
-    background-image: url("../../img/Rectangle3.png");
+    background-image: url("../../img/rectangle3.png");
   }
 }
 
@@ -25,7 +25,7 @@
     left: 4.5%;
     width: 150px;
     height: 269px;
-    background-image: url("../../img/Rectangle1.png");
+    background-image: url("../../img/rectangle1.png");
   }
 
   ::before {
@@ -35,7 +35,7 @@
     right: 17%;
     width: 270px;
     height: 269px;
-    background-image: url("../../img/Rectangle2.png");
+    background-image: url("../../img/rectangle2.png");
   }
 }
 
@@ -70,14 +70,19 @@
 }
 
 .button {
-  width: 234px;
-  min-height: 53px;
+  display: inline-flex;
+  padding: 16px 36px;
   color: var(--black);
   font-weight: 500;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 21px;
   background: var(--gray);
   border-radius: 4px;
   border-style: none;
   cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    background-color: red;
+  }
 }

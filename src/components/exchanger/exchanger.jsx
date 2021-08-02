@@ -47,7 +47,7 @@ function Exchanger() {
   const ratesUpdateStatus = useSelector(selectUpdateRatesStatus);
   const dispatch = useDispatch();
   const isValid = !(Boolean(amountFrom) && Boolean(amountTo) && isEmpty(amountFrom) && isEmpty(amountTo));
-  const buttonClass = cn(isValid && styles.disabled, styles.button);
+  const buttonClass = cn(isValid && styles.disabled, !isValid && styles.active, styles.button);
 
   useEffect(() => {
     if (ratesUpdateStatus.isError) {

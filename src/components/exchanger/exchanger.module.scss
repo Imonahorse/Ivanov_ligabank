@@ -12,13 +12,20 @@
 .button {
   justify-self: end;
   width: 382px;
-  height: 60px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 19px;
   background-color: var(--blue);
   color: var(--gray);
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.active {
+  &:hover {
+    background-color: red;
+  }
 }
 
 .disabled {

@@ -3,7 +3,7 @@ import styles from './user-menu.module.scss';
 
 function UserMenu() {
   return (
-    <ul>
+    <ul className={styles.list}>
       <li className={styles.item}>
         <a href="/" className={styles.link}>
           Войти в Интернет-банк

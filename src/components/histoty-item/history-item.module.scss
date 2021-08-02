@@ -1,7 +1,5 @@
 .item {
   display: flex;
-  min-width: 378px;
-  margin-bottom: 23px;
   font-size: 18px;
   line-height: 130%;
 
@@ -31,6 +29,7 @@
 }
 
 .amountTo {
+  width: 130px;
   margin: 0;
 }
 

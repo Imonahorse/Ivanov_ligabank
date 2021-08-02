@@ -6,7 +6,7 @@ import {
   changeRatesDateRequest,
   changeRatesDateError
 } from './actions';
-import {Valutes} from '../const';
+import {Currency} from '../const';
 
 const ApiRoutes = {
   rates: '/daily_json.js',
@@ -14,11 +14,11 @@ const ApiRoutes = {
 };
 
 const adaptData = (data) => ({
-  [Valutes.RUB]: 1,
-  [Valutes.JPY]: data[Valutes.JPY].Value,
-  [Valutes.EUR]: data[Valutes.EUR].Value,
-  [Valutes.USD]: data[Valutes.USD].Value,
-  [Valutes.CAD]: data[Valutes.CAD].Value,
+  [Currency.RUB]: 1,
+  [Currency.GBP]: data[Currency.GBP].Value,
+  [Currency.EUR]: data[Currency.EUR].Value,
+  [Currency.USD]: data[Currency.USD].Value,
+  [Currency.CNY]: data[Currency.CNY].Value,
 });
 
 const fetchRates = () => async (dispatch, _, api) => {
