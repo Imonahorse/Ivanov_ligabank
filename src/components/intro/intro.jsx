@@ -7,7 +7,7 @@ function Intro() {
       <div className={`${styles.wrapper} ${styles.picture} container`}>
         <h3 className={styles.title}>Лига Банк</h3>
         <p className={styles.text}>Кредиты на любой случай</p>
-        <a className={styles.button}>Рассчитать кредит</a>
+        <a className={styles.button} href="/">Рассчитать кредит</a>
       </div>
     </section>
   );

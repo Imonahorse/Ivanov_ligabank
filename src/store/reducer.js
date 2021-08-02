@@ -5,16 +5,18 @@ import {
   fetchRatesSuccess,
   addHistoryData,
   changeRatesDateRequest,
-  changeRatesDateError, fetchRatesRequest, fetchRatesError
+  changeRatesDateError,
+  fetchRatesRequest,
+  fetchRatesError
 } from './actions';
 
 const initialState = {
   rates: {
-    RUB: 1,
-    GBP: 1,
-    EUR: 1,
+    RUB: 73.4737,
+    GBP: 0.719124,
+    EUR: 0.844202,
     USD: 1,
-    CNY: 1,
+    CNY: 6.4909,
   },
   history: [],
   ratesLoadStatus: {

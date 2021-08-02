@@ -32,7 +32,7 @@ const adaptValue = (value) => {
   return value.trim();
 };
 
-const adaptDate = (date) => dayjs(date).format('YYYY/MM/DD');
+const adaptDate = (date) => dayjs(date).format('YYYY-MM-DD');
 
 const isEmpty = (value) => value !== '0' && value !== 0 && value !== '';
 
@@ -50,6 +50,11 @@ function Exchanger() {
   const buttonClass = cn(isValid && styles.disabled, !isValid && styles.active, styles.button);
 
   useEffect(() => {
+    setAmountTo(calcValue(amountFrom, rates[currencyFrom], rates[currencyTo]));
+    //eslint-disable-next-line
+  }, [rates]);
+
+  useEffect(() => {
     if (ratesUpdateStatus.isError) {
       setErrorState(true);
 
@@ -61,13 +66,13 @@ function Exchanger() {
     }
   }, [ratesUpdateStatus]);
 
-  const handleChangeDate = (calendarDate) => {
+  const onDateChange = (calendarDate) => {
     setDate(calendarDate);
     const adaptedDate = adaptDate(calendarDate);
     dispatch(changeRatesDate(adaptedDate));
   };
 
-  const handleChangeAmount = (evt, type) => {
+  const onAmountChange = (evt, type) => {
     const {value} = evt.target;
     const adaptedValue = adaptValue(value);
     if (isNaN(adaptedValue)) {
@@ -77,35 +82,35 @@ function Exchanger() {
     switch (type) {
       case InputLabels.FROM:
         setAmountFrom(adaptedValue);
-        setAmountTo(calcValue(adaptedValue, rates[currencyTo], rates[currencyFrom]));
+        setAmountTo(calcValue(adaptedValue, rates[currencyFrom], rates[currencyTo]));
         break;
       case InputLabels.TO:
         setAmountTo(adaptedValue);
-        setAmountFrom(calcValue(adaptedValue, rates[currencyFrom], rates[currencyTo]));
+        setAmountFrom(calcValue(adaptedValue, rates[currencyTo], rates[currencyFrom]));
         break;
       default:
         break;
     }
   };
 
-  const handleChangeCurrency = (evt, type) => {
+  const onCurrencyChange = (evt, type) => {
     const {value} = evt.target;
 
     switch (type) {
       case InputLabels.FROM:
         setCurrencyFrom(value);
-        setAmountTo(calcValue(amountFrom, rates[currencyTo], rates[value]));
+        setAmountTo(calcValue(amountFrom, rates[value], rates[currencyTo]));
         break;
       case InputLabels.TO:
         setCurrencyTo(value);
-        setAmountTo(calcValue(amountFrom, rates[value], rates[currencyFrom]));
+        setAmountTo(calcValue(amountFrom, rates[currencyFrom], rates[value]));
         break;
       default:
         break;
     }
   };
 
-  const handleSubmitForm = (evt) => {
+  const formSubmitHandler = (evt) => {
     evt.preventDefault();
     const data = {
       id: Math.random().toFixed(ID_SIZE),
@@ -125,26 +130,26 @@ function Exchanger() {
       <h2 className={styles.title}>Конвертер валют</h2>
       <form
         className={styles.container}
-        onSubmit={handleSubmitForm}
+        onSubmit={formSubmitHandler}
       >
         <Input
           label={InputLabels.FROM}
           amountValue={amountFrom}
-          handleChangeAmount={handleChangeAmount}
+          onAmountChange={onAmountChange}
           currencyValue={currencyFrom}
-          handleChangeCurrency={handleChangeCurrency}
+          onCurrencyChange={onCurrencyChange}
         />
         <Input
           isImage
           label={InputLabels.TO}
           amountValue={amountTo}
-          handleChangeAmount={handleChangeAmount}
+          onAmountChange={onAmountChange}
           currencyValue={currencyTo}
-          handleChangeCurrency={handleChangeCurrency}
+          onCurrencyChange={onCurrencyChange}
         />
         <Calendar
           date={date}
-          handleChangeDate={handleChangeDate}
+          onDateChange={onDateChange}
         />
         <button
           className={buttonClass}

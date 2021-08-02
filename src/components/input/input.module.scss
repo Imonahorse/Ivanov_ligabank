@@ -26,6 +26,7 @@
   line-height: 140%;
   border: 1px solid var(--black);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .image {
@@ -52,4 +53,5 @@
   background-image: url("../../img/caret.svg");
   background-repeat: no-repeat;
   background-position: 86% center;
+  cursor: pointer;
 }

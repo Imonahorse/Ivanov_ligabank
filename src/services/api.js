@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BACKEND_URL = 'https://www.cbr-xml-daily.ru';
+const BACKEND_URL = 'https://openexchangerates.org/api';
 const REQUEST_TIMEOUT = 5000;
 
 const api = axios.create({

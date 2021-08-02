@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 
 const WEEK = 7;
 
-function Calendar({date, handleChangeDate}) {
-  const onChange = (calendarDate) => {
+function Calendar({date, onDateChange}) {
+  const calendarChangeHandler = (calendarDate) => {
     const selectedDate = calendarDate[0];
-    handleChangeDate(selectedDate);
+    onDateChange(selectedDate);
   };
 
   const maxDate = new Date();
@@ -23,7 +23,7 @@ function Calendar({date, handleChangeDate}) {
       value={date}
       options={{
         dateFormat: 'j.n.Y',
-        onChange: onChange,
+        onChange: calendarChangeHandler,
         maxDate: maxDate,
         minDate: minDate,
       }}
@@ -33,7 +33,7 @@ function Calendar({date, handleChangeDate}) {
 
 Calendar.propTypes = {
   date: PropTypes.object.isRequired,
-  handleChangeDate: PropTypes.func.isRequired,
+  onDateChange: PropTypes.func.isRequired,
 };
 
 export default Calendar;
