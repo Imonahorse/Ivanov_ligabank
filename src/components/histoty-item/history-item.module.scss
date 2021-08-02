@@ -9,19 +9,18 @@
 }
 
 .date {
-  margin-right: 51px;
+  margin-right: 40px;
 }
 
 .amountFrom {
   position: relative;
-  padding-right: 50px;
-  margin: 0 23px 0 0;
+  padding-right: 66px;
 
   &:after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 13px;
     width: 41px;
     height: 18px;
     background-image: url("../../img/arrow.svg");
@@ -29,7 +28,7 @@
 }
 
 .amountTo {
-  width: 130px;
+  width: 110px;
   margin: 0;
 }
 

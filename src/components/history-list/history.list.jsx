@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {selectModifiedHistory} from '../../store/selectors';
 import HistoryItem from '../histoty-item/history-item';
-import styles from './history.module.scss';
+import styles from './history-list.module.scss';
 
 function HistoryList() {
   const history = useSelector(selectModifiedHistory);
