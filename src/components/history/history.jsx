@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './history.module.scss';
 import HistoryList from '../history-list/history.list';
-import {clearHistory} from '../../store/actions';
+import {clearHistory} from '../../store/slice';
 import {useDispatch} from 'react-redux';
 
 function History() {
